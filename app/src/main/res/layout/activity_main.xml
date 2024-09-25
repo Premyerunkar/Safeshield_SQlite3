@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gr"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crd"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#031E3F"
+        app:layout_constraintBottom_toBottomOf="@+id/dots"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/tx1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/varela_round"
+        android:textColor="@color/white"
+        android:text="Starting the Service will help to track your location"
+        android:layout_below="@+id/crd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tx2"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/varela_round"
+        android:textColor="@color/white"
+        android:text="Make sure that the location is turned on"
+        android:layout_below="@+id/tx1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tx3"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/varela_round"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:text="Turn off the Siren sound"
+        android:layout_below="@+id/tx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_marginTop="20dp"
+        android:layout_alignEnd="@id/dots"
+        android:layout_below="@id/tx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tx4"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/varela_round"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:text="Turn on Secure mode"
+        android:layout_below="@+id/tx3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_marginTop="20dp"
+        android:layout_alignEnd="@id/dots"
+        android:layout_below="@id/tx3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+
+
+    <View
+        android:elevation="16dp"
+        android:id="@+id/dots"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:onClick="PopupMenu"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/menu"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/varela_round"
+            android:text="SOS Will Be Sent To\n"
+
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textNum"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200dp"
+            android:layout_below="@id/textNum"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="startServiceV"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/black"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/start"
+            android:textColor="@color/white"
+            android:text="Start"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:id="@+id/stop"
+            app:layout_constraintTop_toBottomOf="@id/start"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@id/start"
+            app:cornerRadius="10dp"
+            android:backgroundTint="@color/black"
+            android:onClick="stopService"
+            android:text="stop"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

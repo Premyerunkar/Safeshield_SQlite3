@@ -17,4 +17,4 @@ Contacts Integration: Easily select trusted contacts from your phone's contact l
 
 
 Clone this repository to your local machine:
-git clone https://github.com/yourusername/safe-shield.git
+git clone https://github.com/Premyerunkar/Safeshield_SQlite3.git

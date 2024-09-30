@@ -11,7 +11,8 @@ Audio & Video Recording: Start audio and video recording from the front camera w
 Siren Sound: Option to trigger a loud siren sound during emergencies for added security.
 Contacts Integration: Easily select trusted contacts from your phone's contact list to share emergency updates.
 
-<img width="1440" alt="Safeshield" src="https://github.com/user-attachments/assets/dce93dc2-8a7d-4b20-b6ec-544fc87d8c8c">
+![safeshield_images](https://github.com/user-attachments/assets/28c1327c-9833-4190-91a3-9d092af4d8ce)
+
 
 
 
